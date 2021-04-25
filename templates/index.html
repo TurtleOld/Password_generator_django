@@ -25,7 +25,7 @@
                   {% csrf_token %}
                   <label for="length_password">Длина пароля:</label>
                   <input type="number" name="length_password" max="64" value="{{ len_pass }}" required>
-                  <input type="submit" class="gen_password" value="Сгенерировать">
+                  <input type="submit" class="gen_password btn btn-primary" value="Сгенерировать">
                   <br>
                   <input type="checkbox" name="sym_numbers" value="Digits" checked>
                   <input type="checkbox" name="sym_letters" value="Letters" checked>
