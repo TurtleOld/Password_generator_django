@@ -1,0 +1,3 @@
+python-dotenv~=0.15.0
+pip
+Django~=3.2
