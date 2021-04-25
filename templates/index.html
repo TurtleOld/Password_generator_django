@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Генератор паролей</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="container">
+      <div class="row">
+          <div class="col-12 result_password">
+              <form action="" id="form" method="POST">
+                  {% csrf_token %}
+                  <label for="length_password">Длина пароля:</label>
+                  <input type="number" name="length_password" max="64" value="{{ len_pass }}" required>
+                  <input type="submit" class="gen_password" value="Сгенерировать">
+                  <br>
+                  <input type="checkbox" name="sym_numbers" value="Digits" checked>
+                  <input type="checkbox" name="sym_letters" value="Letters" checked>
+                  <!-- /.form-control -->
+              </form>
+              <p>{{ password }}</p>
+          </div>
+          <!-- /.col-12 -->
+      </div>
+      <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  </body>
+</html>
