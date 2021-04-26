@@ -1,0 +1,10 @@
+.result_password {
+    margin: 5rem 20rem;
+}
+input[type="checkbox"]  {
+    padding-top: 25px;
+}
+
+.title_pass_gen {
+    text-align: center;
+}
